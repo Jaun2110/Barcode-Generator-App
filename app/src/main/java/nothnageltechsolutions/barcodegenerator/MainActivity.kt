@@ -30,8 +30,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         val scannerInput = findViewById<EditText>(R.id.scannerInput)
         val scannedDataTextView = findViewById<TextView>(R.id.scannedData)
+
+
+        // Get the current year
+        val currentYear = Calendar.getInstance().get(Calendar.YEAR)
+
+        // Set the text for the footer TextView
+        val footerTextView = findViewById<TextView>(R.id.FooterText)
+        footerTextView.text = "Nothnagel Tech Solutions @ $currentYear"
 
         scannerInput.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
