@@ -1,6 +1,8 @@
 [versions]
-agp = "8.7.1"
-kotlin = "1.9.24"
+bom = "3.0.0"             # Supabase BOM version
+bomVersion = "3.0.0"
+ktor = "3.0.1"            # Ktor version compatible with Supabase
+kotlin = "1.8.21"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -11,16 +13,21 @@ activity = "1.9.3"
 constraintlayout = "2.2.0"
 
 [libraries]
+auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt" }
+bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "bomVersion" }
+postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt" }
+ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
-androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
-material = { group = "com.google.android.material", name = "material", version.ref = "material" }
-androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
-androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+supabase-auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt" }
+supabase-postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt" }
 
 [plugins]
-android-application = { id = "com.android.application", version.ref = "agp" }
+android-application = { id = "com.android.application", version = "8.1.2" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
-

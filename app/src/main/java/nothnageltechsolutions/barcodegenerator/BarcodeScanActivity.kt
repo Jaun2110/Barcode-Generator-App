@@ -16,7 +16,7 @@ import java.io.IOException
 import java.io.OutputStream
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class BarcodeScanActivity : AppCompatActivity() {
 
     private val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
     private var bluetoothSocket: BluetoothSocket? = null

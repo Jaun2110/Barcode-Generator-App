@@ -34,9 +34,15 @@ android {
         jvmTarget = "11"
     }
 }
-
+repositories {
+    google()
+    mavenCentral() // Ensure this is included
+}
 dependencies {
-
+    implementation(libs.bom) // Supabase BOM
+    implementation(libs.supabase.auth.kt)             // Supabase Auth module
+    implementation(libs.supabase.postgrest.kt)        // Supabase Postgrest module
+    implementation(libs.ktor.client.android)                  // Required Ktor client
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
