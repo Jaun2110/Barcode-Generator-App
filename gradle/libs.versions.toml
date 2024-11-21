@@ -1,8 +1,9 @@
 [versions]
 bom = "3.0.0"             # Supabase BOM version
 bomVersion = "3.0.0"
+kotlinxSerializationJson = "1.7.3"
 ktor = "3.0.1"            # Ktor version compatible with Supabase
-kotlin = "1.8.21"
+kotlin = "2.0.0"
 coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
@@ -15,6 +16,7 @@ constraintlayout = "2.2.0"
 [libraries]
 auth-kt = { module = "io.github.jan-tennert.supabase:auth-kt" }
 bom = { module = "io.github.jan-tennert.supabase:bom", version.ref = "bomVersion" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
 postgrest-kt = { module = "io.github.jan-tennert.supabase:postgrest-kt" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktor" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
